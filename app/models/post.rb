@@ -7,7 +7,7 @@ class Post < ApplicationRecord
     user.update(posts_counter: user.posts.count)
   end
 
-  def rencent_post
+  def recent_post
     post.order(created_at: :desc).limit(5)
   end
 end
